@@ -1,0 +1,33 @@
+:host ::ng-deep .p-dropdown{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+:host ::ng-deep .p-inputtext{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+
+
+:host ::ng-deep .p-inputNumber{
+width: 100%;
+}
+:host ::ng-deep p-inputnumber span {
+    width: 100%;
+}
+h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.inputsContainer {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

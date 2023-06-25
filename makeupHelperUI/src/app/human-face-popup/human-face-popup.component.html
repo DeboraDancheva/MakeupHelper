@@ -1,0 +1,69 @@
+<app-main-menu></app-main-menu>
+<div style="text-align: center;display: flex;height: 80%;">
+
+
+<div class="container">
+
+
+<div class="humanFace">
+    <div class="face-container" >
+        <img src="../../../assets/resources/humanFace.JPG" />
+        <div class="face-overlay">
+            <div class="leftEye" (mouseover)="hightlightFacePart('eyes')" (click)="getMediaForFacePart('eyes')" [ngClass]="{'highlighted': highlightedFacePart==='eyes'}">
+    
+            </div>
+            <div class="rightEye" (mouseover)="hightlightFacePart('eyes')" (click)="getMediaForFacePart('eyes')" [ngClass]="{'highlighted': highlightedFacePart==='eyes'}">
+    
+            </div>         
+            <div class="nose" (mouseover)="hightlightFacePart('nose')" (click)="getMediaForFacePart('nose')" [ngClass]="{'highlighted': highlightedFacePart==='nose'}">
+    
+            </div>
+
+            <div class="face" (mouseover)="hightlightFacePart('face')" (click)="getMediaForFacePart('face')" [ngClass]="{'highlighted': highlightedFacePart==='face'}">
+    
+            </div>
+            <div class="mouth" (mouseover)="hightlightFacePart('mouth')" (click)="getMediaForFacePart('mouth')" [ngClass]="{'highlighted': highlightedFacePart==='mouth'}">
+    
+            </div>
+    
+        </div>
+    </div>    
+</div>
+<div class="welcomeContainer">
+    <div class="welcomeContent">
+        <h1>Добре дошла</h1>
+        <h1 style="margin-top:1rem;"> в твоя грим помощник</h1>
+        <h3>Избери коя част на лицето искаш да гримираш първо и да започваме!</h3>
+        <!-- <ul>
+            <li>
+                <h4>
+                    Разглеждаш различни клипове и снимки, които да ти помогнат да направиш най-добрата грим визия спрямо твоите форми на лицето.
+                </h4>
+                
+            </li>
+            <li>
+                <h4>
+                    Разглеждаш най-актуалните и харесвати грим продукти
+                </h4>
+                
+            </li>
+            <li>
+                <h4>
+                    Да споделиш и своя опит с различните грим продукти с другите потребители
+                </h4>
+            </li>
+            <li>
+                <h4>
+                    Да добавяш грим продукти в любими, където да можеш лесно да ги достъпваш.
+                </h4>
+            </li>
+            <li>
+                <h4>
+                    Да добавяш любимите ти наръчници в за гледане по-късно.
+                </h4>
+            </li>
+          </ul> -->
+    </div>
+</div>
+</div>
+</div>

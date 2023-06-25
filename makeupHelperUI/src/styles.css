@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+app-root {
+    display: block;  /* Ensure the app-root is a block element */
+    height: 100%;
+    width: 100%;
+  }
+
+  .p-button {
+    background-color: darksalmon !important;
+    border-color: darksalmon !important;
+  }
+
+  .p-slider-range {
+    background: darksalmon !important;
+  }

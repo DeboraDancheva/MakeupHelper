@@ -1,0 +1,61 @@
+<div >
+   <app-main-menu></app-main-menu>
+
+   <div class="filters">
+    <div class="search" style="height: 4rem;;"> 
+      <input style="border:none; border-bottom: 1px solid darksalmon;" type="text" placeholder="Търси по име, марка, вид" #filter class="searchInput">     
+    <p-button class="primary" type="button" (click)="filterResults(filter.value)">Търси</p-button>
+    <div class="icon-button" href="#" (click)="clearFilters()">
+      <i class="pi pi-filter-slash"></i>
+    </div>
+   </div>
+
+   <div class="priceSliderContainer">
+    <div class="float">
+      <label>Филтрирай по цена</label>
+      <div class="priceSlider">
+        <input type="text" pInputText [(ngModel)]="selectedPrice" class="w-full"/>
+        <p-slider [(ngModel)]="selectedPrice" (onChange)="handleSliderChange()" class="w-full"></p-slider>
+      </div>
+    </div> 
+  </div>
+  
+   </div>
+   
+ 
+  <div class="card-grid" *ngIf="filteredMakeupProducts.length>0" style="margin-top:2rem;">
+    <div class="card" *ngFor="let product of filteredMakeupProducts">
+
+      <!-- <div *ngIf="favoriteView">
+        <div class="card-images">
+          <img src="../../../assets/resources/makeupMedia/{{product.mediaNames[product.currentImageIndex]}}" alt="Product Image"  (click)="openPopup(product)" >
+          <div class="carousel-arrows">
+            <button class="prev-arrow" (click)="changeImage(-1, product)"  [disabled]="product.mediaNames.length <= 1 || product.currentImageIndex === 0">&#9001;</button>
+            <button class="next-arrow" (click)="changeImage(1, product)"  [disabled]="product.mediaNames.length <= 1 || product.currentImageIndex === product.mediaNames.length - 1">&#9002;</button>
+          </div>
+        </div>
+      </div> -->
+
+      <div  >
+        <div class="card-images" [ngClass]="{'gray': product.hover}" (mouseenter)="product.hover = true" (mouseleave)="product.hover = false">
+          <img src="../../../assets/resources/makeupMedia/{{product.mediaNames[product.currentImageIndex]}}" alt="Product Image"  (click)="openPopup(product)" >
+          <div class="overlay" *ngIf="product.hover" (click)="toggleFavorite(product,$event)">
+            <i class="material-icons" [ngClass]="{'filled': product.favorite, 'border-only': !product.favorite}">favorite</i>
+          </div>
+          <div class="carousel-arrows">
+            <button class="prev-arrow" (click)="changeImage(-1, product)"  [disabled]="product.mediaNames.length <= 1 || product.currentImageIndex === 0">&#9001;</button>
+            <button class="next-arrow" (click)="changeImage(1, product)"  [disabled]="product.mediaNames.length <= 1 || product.currentImageIndex === product.mediaNames.length - 1">&#9002;</button>
+          </div>
+        </div>
+      </div>
+   
+     
+      <div class="card-details">
+        <h3>{{ product.productName }}</h3>
+        <p>Марка: {{ product.brand }}</p>
+        <p>Цена: {{ product.price }}</p>
+        <p-rating [disabled]="true" [cancel]="false" [(ngModel)]="product.averageReview"></p-rating>
+      </div>
+    </div>
+  </div>
+  </div>

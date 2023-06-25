@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+  <div *ngIf="userFaceConfigDataList.length>0" > 
+    
+  <h1 mat-dialog-title>Избери формата на твоята/твоите {{facePartLabel | translateValue: 'en' }}</h1>
+  <div mat-dialog-content style="margin-top: 3rem;">
+    <p-carousel  [value]="currentSlideImages" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions" autoPlayInterval="3000">
+      <ng-template let-item pTemplate="item">
+          <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+              <div class="mb-3">
+                <button (click)="faceFormSelected(item)" [ngClass]="{'imgButton': selectedFileName === item}" style="background-color: transparent;">
+                  <img src="../../../assets/resources/facePartsTypesMedia/{{ item }}"   class="w-6 shadow-2" style=" width: 100%;
+                  height: auto;
+                  object-fit: cover;"/>
+                  </button>
+              </div>
+            </div>
+      </ng-template>
+    </p-carousel>
+     
+  </div> 
+  <div mat-dialog-actions class="actionsContainer" style="margin:2rem">
+    <p-button  type="submit" (click)="nextButtonClicked()" #nextButton [disabled]="!selected" class="p-button-rounded nextButton ">
+     
+      {{buttonLabel}}
+    </p-button>
+</div>
+
+ 
+</div>
+  
+ 

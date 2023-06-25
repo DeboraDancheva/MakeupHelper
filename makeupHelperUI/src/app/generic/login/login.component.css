@@ -1,0 +1,76 @@
+::ng-deep .p-card .p-card-title {
+    font-size: 1rem !important;
+    text-align: center;
+}
+
+
+::ng-deep p-card {
+  width: 70%;
+  display: block;
+  margin-left: 4rem;
+}
+
+::ng-deep .p-card .p-card-subtitle {
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.p-cardbody {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.input {    
+    display: grid;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+input {
+    border-radius: 10px;
+}
+
+:host ::ng-deep .p-inputtext {
+    width: 15rem;
+    border-radius: 10px;
+}
+
+::ng-deep .p-password {
+    width: 10rem;
+}
+
+::ng-deep .p-password input {
+    width: 100%;
+}
+
+.p-card-body {
+    height: 100%;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  :host ::ng-deep .p-card .p-card-body {
+    height: 100% !important;
+  }
+
+  :host ::ng-deep .p-card .p-card-content {
+    height: 80% !important;
+  }
+  :host ::ng-deep form {
+    height: 100% !important;
+  }
+
+  .fontXsmall {
+    font-size:x-small;
+  }
+
+  .marginWhenRegisterForm {
+    margin-bottom:1rem;
+  }

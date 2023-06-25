@@ -1,0 +1,16 @@
+.button-container {
+    text-align: right;
+    margin: 1rem 0;
+    margin-right: 11rem;
+  }
+
+  
+  .table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .p-button {
+    background-color: darksalmon;
+  }

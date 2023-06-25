@@ -1,0 +1,129 @@
+    <p-card   [ngStyle]="{height: registration ? '38rem' : '25rem'}"
+        [style]="{  borderRadius: '15px',clear: 'both'}"  header="Добре дошла"  subheader="Намери нови идеи, които да опиташ">
+    
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+    <form [formGroup]="loginForm" p-cardBody class="p-cardbody" (ngSubmit)="onSubmit()">
+
+      <div *ngIf="registration" class="form-group input marginWhenRegisterForm">
+        <label for="firstname" class="fontXsmall">Име</label>
+        <input type="text" pInputText placeholder="Име" formControlName="firstname" class="form-control, fontXsmall" styleClass="p-inputtext" size="5" [ngClass]="{ 'is-invalid': submitted && f['firstname'].errors }" />
+        <div *ngIf="submitted && f['firstname'].errors" class="invalid-feedback">
+          <div *ngIf="f['firstname'].errors['required']">Името е задължително</div>
+        </div>
+      </div>
+
+      <div *ngIf="registration" class="form-group input marginWhenRegisterForm">
+        <label for="lastname" class="fontXsmall">Фамилия</label>
+        <input type="text" pInputText placeholder="Фамилия" formControlName="lastname" class="form-control fontXsmall" styleClass="p-inputtext" size="5" [ngClass]="{ 'is-invalid': submitted && f['lastname'].errors }" />
+        <div *ngIf="submitted && f['lastname'].errors" class="invalid-feedback">
+          <div *ngIf="f['lastname'].errors['required']">Фамилията е задължителна</div>
+        </div>
+      </div>
+
+        <div class="form-group input" [ngClass]="{'marginWhenRegisterForm':registration}">
+          <label for="username" [ngClass]="{'fontXsmall':registration}">Потребителско име</label>
+          <input type="text" pInputText placeholder="Потребителско име" formControlName="username"  class="form-control" styleClass="p-inputtext" size="5" [ngClass]="{ 'is-invalid': submitted && f['username'].errors, 'fontXsmall':registration }" />
+          <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+            <div *ngIf="f['username'].errors['required']">Потребителското име е задължително</div>
+          </div>
+        </div>
+
+        <div class="form-group input" [ngClass]="{'marginWhenRegisterForm':registration}">
+          <label for="password"  [ngClass]="{'fontXsmall':registration}">Парола</label>
+          <input type="password" placeholder="Парола" pInputText formControlName="password"  size="5" class="form-control" styleClass="p-inputtext" [ngClass]="{ 'is-invalid': submitted && f['password'].errors, 'fontXsmall':registration }" />
+          <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+            <div *ngIf="f['password'].errors['required']">Паролата е задължителна</div>
+          </div>
+        </div>
+
+        <div *ngIf="registration" class="form-group input marginWhenRegisterForm">
+          <label for="repeatedPassword" class="fontXsmall">Парола</label>
+          <input type="password" placeholder="Повтори парола" pInputText formControlName="repeatedPassword"  size="5" class="form-control fontXsmall" styleClass="p-inputtext" [ngClass]="{ 'is-invalid': submitted && f['repeatedPassword'].errors }" />
+          <div *ngIf="submitted && f['repeatedPassword'].errors" class="invalid-feedback">
+            <div *ngIf="f['repeatedPassword'].errors['required']">Паролата е задължителна</div>
+          </div>
+        </div>
+
+        <div *ngIf="registration" class="form-group input marginWhenRegisterForm">
+          <label for="email" class="fontXsmall">Имейл</label>
+          <input type="email" placeholder="Имейл" pInputText formControlName="email"  size="5" class="form-control fontXsmall" styleClass="p-inputtext" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']">Имейл е задължителен</div>
+          </div>
+        </div>
+
+        <div class="form-group" style="display:grid" [ngClass]="{'marginWhenRegisterForm':registration}">
+          <p-button  type="submit"  #continueButton [disabled]="loading" class="p-button-rounded continueButton">
+            <span *ngIf="loading"  class="spinner-border spinner-border-sm mr-1"></span>
+            Вход
+          </p-button>
+          <div *ngIf="!registration" style="display:flex">
+            <p style="font-size:10px; margin: 0; padding-right: 0.3rem;">Все още не си член?</p>
+            <a (click)="register()" style="font-size: 10px;">Регистрация</a>
+          </div>
+
+          <div *ngIf="registration" style="display:flex">
+            <p style="font-size:10px; margin: 0; padding-right: 0.3rem;">Вече си член?</p>
+            <a (click)="login()" style="font-size: 10px;">Вход</a>
+          </div>
+        
+        </div>
+
+      </form>  
+
+        <!-- <div p-cardBody class="p-cardbody" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+              
+            <div class="input form-group" >
+                <label labelFor="username">Username</label>
+                <input size="5" pInputText formControlName="username" styleClass="p-inputtext" placeholder="Username" type="text" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+                <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                  <div *ngIf="f['username'].errors['required']">Username is required</div>
+                </div>
+                
+            </div>
+            
+
+             <div class="input form-group" *ngIf="registration">
+                <label labelFor="email">Email</label>
+                <input formControlName="email" type="text" pInputText styleClass="p-inputtext" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"/>
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                    <div *ngIf="f['email'].errors['required']">Email is required</div>
+                  </div>
+            </div> 
+
+            <div class="input form-group" >
+                <label labelFor="password">Password</label>                
+                <p-password  formControlName="password" class="form-control" placeholder="Password" [toggleMask]="true" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"></p-password>
+               
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors['required']">Password is required</div>
+                </div>
+            </div>
+
+             <div class="input form-group"  *ngIf="registration">
+                <label labelFor="repeatedPassword">Repeat password</label>                
+                <p-password  formControlName="repeatedPassword" class="form-control" placeholder="Repeat password" [toggleMask]="true" [ngClass]="{ 'is-invalid': submitted && f['repeatedPassword'].errors }"></p-password>
+               
+                <div *ngIf="submitted && f['repeatedPassword'].errors" class="invalid-feedback">
+                  <div *ngIf="f['repeatedPassword'].errors['required']">Password is required</div>
+                </div>
+            </div>
+        
+            <div class="form-group" >
+            <p-button #continueButton label="Continue" [disabled]="loading" class="p-button-rounded continueButton">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            </p-button>
+            
+
+            <div style="display: ruby;">
+                <p style="font-size:10px">Still not a member?</p>
+                <a (click)="myMethod()" style="padding-left: 0.8rem;font-size:10px">Sign up</a>
+            </div>
+        </div>
+            
+        </div> -->
+        
+    </p-card>

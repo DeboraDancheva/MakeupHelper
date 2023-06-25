@@ -1,0 +1,22 @@
+<div class="card">
+   <app-main-menu [items]="items"></app-main-menu>
+</div>
+
+
+<div class="button-container">
+   <p-button class="delete-button">Изтрии</p-button>
+</div>
+
+<div  class="table-container" *ngIf="users">
+   <p-tabView style="width: 80%;">
+      <p-tabPanel header="Потребители" (click)="getUsers()">
+        <app-generic-table [data]="users" [columns]="usersColumns"></app-generic-table>
+      </p-tabPanel>
+      <p-tabPanel header="Продукти"  (click)="getProducts()">
+         <app-generic-table [data]="products" [columns]="productsColumns"></app-generic-table>
+      </p-tabPanel>   
+      <p-tabPanel header="Файлове" (click)="getMedia()">
+         <app-generic-table [data]="media" [columns]="mediaColumns"></app-generic-table>
+     </p-tabPanel>  
+   </p-tabView>
+</div>

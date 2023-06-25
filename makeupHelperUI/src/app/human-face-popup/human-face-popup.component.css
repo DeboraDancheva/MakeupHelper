@@ -1,0 +1,145 @@
+.face-container {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    height: 40rem;
+}
+
+:host {
+    display: block;
+    height: 100%;
+  }
+.face-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.leftEye {
+    top: 42%;
+    left: 38%;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.rightEye {
+    top: 42%;
+    left: 55%;
+    width: 8%;
+    height: 8%;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+area {
+    outline: none;
+    opacity: 0.5; /* Adjust the opacity value as needed */
+    transition: opacity 0.3s ease-in-out;
+    background-color: black;
+  }
+  
+.nose{
+    top: 40%;
+    left: 47.5%;
+    width: 6%;
+    height: 25%;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.mouth {
+  top: 66%;
+  left: 45%;
+  width: 11%;
+  height: 10%;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.face-part :hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.face-part:not(:hover) {
+    background-color:none;
+}
+
+.highlighted {
+    background-color: rgba(124, 119, 119, 0.75);
+}
+
+.humanFace {
+    margin-top: 10rem;
+    width: 60%;
+    height: auto;
+    object-fit: scale-down;
+}
+
+img {
+    border-radius: 20px;
+    height: 45rem;
+    width: auto;
+}
+
+h1 {
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 2rem;
+}
+
+.welcomeContainer{
+    width: 60%;
+    height: 60%;
+    background-color: darksalmon;
+    border-radius: 20px;
+    margin-top: 7rem;
+    margin-right: 4rem;
+}
+
+.welcomeContent {
+    margin:1rem;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: darksalmon;
+}
+
+h1, h3, h4 {
+    font-family: monospace;
+    color: white
+}
+
+h1{
+    text-align: left;
+    font-size: 70px;
+    padding:0;
+}
+h3 {
+    font-size: 30px;
+    padding: 0;
+    text-align: left;
+}
+::marker {
+    color: white;
+}

@@ -1,0 +1,24 @@
+.filter-row label {
+    display: inline-block;
+    width: 100px; /* Adjust the width as per your requirement */
+  }
+
+  .filter-row button {
+    margin-left: 10px;
+  }
+  
+  .p-table th {
+    width: 100%; /* The columns will have equal width */
+  }
+  
+  .filter-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .filter-row input {
+    width: 12rem; /* Adjust the width as per your requirement */
+    text-align: center;
+  }

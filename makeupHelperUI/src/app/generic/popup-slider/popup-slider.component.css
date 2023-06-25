@@ -1,0 +1,87 @@
+h1 {
+    text-align: center;
+}
+
+  img {
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	transition: filter 0.3s ease; /* Transition effect for smooth hover */
+  }
+  
+
+  img:hover {
+	filter: grayscale(100%); /* Apply grayscale filter on hover */
+  }
+
+.imgButton {
+	border: 2px solid gray;
+  }
+  
+
+.slick-list {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.slick-list .slick-slide {
+	font-size: 30px;
+	text-align: center;
+	padding: 40px 20px;
+	line-height: 2;
+	font-weight: 700;
+}
+.slick-list .slick-slide:nth-child(even) {
+	background-color: #ddd;
+}
+.slick-list .slick-slide:nth-child(odd) {
+	background-color: #ccc;
+}
+.slick-arrow {
+	z-index: 1;
+	width: 40px;
+	height: 40px;
+    color: gray;
+}
+
+.slick-arrow:before {
+	font-size: 30px;
+    color: gray;
+}
+.slick-next {
+	right: 0;
+    color: gray;
+}
+.slick-prev {
+	left: 0;
+    color: gray;
+}
+
+.btn-wrap {
+	text-align: center;
+	width: 100%;
+}
+button {
+	background-color: #ddd;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 10px;
+	font-size: 18px;
+	font-weight: 600;
+	transition: all 0.5s;
+}
+button.slick-disabled {
+	opacity: 0.6;
+}
+
+
+.nextButton {
+	position: absolute;
+	right: 0;
+}
+
+.actionsContainer {
+	bottom: 0;
+	margin: 2rem;
+}

@@ -1,0 +1,22 @@
+<div >
+ <app-main-menu [facePart]="facePart"></app-main-menu>
+  
+<div class="container">
+  <div class="grid-item" *ngFor = "let media of mediaData"  (mouseenter)="media.hover = true" (mouseleave)="media.hover = false" (click) = "openDialog(media.name, media.type)">
+     <div *ngIf="media.type === 'image'" (mouseenter)="media.hover = true" (mouseleave)="media.hover = false">
+      <img [ngClass]="{'gray': media.hover}" #mediaPlayer src="../../../assets/resources/makeupMedia/{{media.name}}" />
+      <div class="overlay" *ngIf="media.hover" (click)="toggleFavorite(media,$event)">
+        <i class="material-icons" [ngClass]="{'filled': media.favorite, 'border-only': !media.favorite}">favorite</i>
+      </div>
+    </div>
+
+    <div *ngIf="media.type === 'video'" (mouseenter)="media.hover = true" (mouseleave)="media.hover = false">
+      <video [ngClass]="{'gray': media.hover}" #videoPlayer src="../../../assets/resources/makeupMedia/{{media.name}}" controls></video>
+      <div class="overlay" *ngIf="media.hover" (click)="toggleFavorite(media,$event)">
+        <i class="material-icons" [ngClass]="{'filled': media.favorite, 'border-only': !media.favorite}">favorite</i>
+      </div>
+    </div>
+       
+  </div>
+</div>
+</div>

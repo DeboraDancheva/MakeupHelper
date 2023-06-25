@@ -1,0 +1,35 @@
+<div style="width: 100%; height: 10%;background-color: darksalmon;padding: 0;text-align: center;">
+    <h2 mat-dialog-title style="font-family: monospace;color: white;">Добави грим продукт</h2>
+    </div>
+
+<div style="margin-top: 3rem;">
+    <div style="display:flex">
+        <div class="card justify-content-center inputsContainer" style="display:grid; width: 50%;">
+
+            <p-dropdown [options]="faceParts" [(ngModel)]="product.facePart" styleClass="my-dropdown"></p-dropdown>
+            <p-dropdown [options]="productTypes" [(ngModel)]="product.productType" styleClass="my-dropdown"></p-dropdown>
+            <input type="text" placeholder="Марка" pInputText [(ngModel)]="product.brand" />
+            <input type="text" placeholder="Име" pInputText [(ngModel)]="product.productName" />   
+            <p-inputNumber [(ngModel)]="product.price" mode="decimal" inputId="withoutgrouping" [useGrouping]="false"> </p-inputNumber>          
+            <textarea rows="5" cols="30" placeholder="Описание" pInputTextarea [(ngModel)]="product.description"></textarea>
+
+        </div>
+        <div>
+            <p-fileUpload name="myfile[]" chooseLabel="Избери файл" uploadLabel="Качи файл" cancelLabel="Отказ" [multiple]="true"  [customUpload]="true"
+            (uploadHandler)="onUpload($event)" accept="image/*,video/*" >
+                <ng-template pTemplate="toolbar">
+                    <div class="py-3"></div>
+                </ng-template>
+                <ng-template let-file pTemplate="file">
+                    <div>Файлът е качен успешно</div>
+                </ng-template>
+                <ng-template pTemplate="content" let-files>
+                    <div>Плъзни файлове тук</div>
+                </ng-template>
+            </p-fileUpload>
+            
+        </div>
+    </div>
+    
+   
+</div> 

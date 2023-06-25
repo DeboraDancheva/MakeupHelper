@@ -1,0 +1,6 @@
+<div class="imgContainer" >
+    <img *ngIf="mediaType === 'image'" src="../../../assets/resources/makeupMedia/{{mediaName}}" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)"/>
+    <div class="video-container">
+        <video *ngIf="mediaType === 'video'" src="../../../assets/resources/makeupMedia/{{mediaName}}" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)" controls></video>
+    </div> 
+</div>

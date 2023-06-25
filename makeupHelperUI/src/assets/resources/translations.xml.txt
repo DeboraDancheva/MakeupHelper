@@ -1,0 +1,89 @@
+<?xml version="2.0" encoding="utf-8"?>
+<translations>
+  <language code="en">
+    <message name="UI_MESS_EYES">Eyes</message>
+	<message name="UI_MESS_MOUTH">Mouth</message>
+	<message name="UI_MESS_NOSE">Nose</message>
+	<message name="UI_MESS_FACE">Face</message> 
+
+
+	<message name="UI_MESS_EYES_ALMOND">almond</message>  
+	<message name="UI_MESS_EYES_CLOSE_SET">close set</message>  
+	<message name="UI_MESS_EYES_DOWNTURNED">downturned</message>  
+	<message name="UI_MESS_EYES_HOODED">hooded</message>  
+	<message name="UI_MESS_EYES_ROUND">round</message>  
+	<message name="UI_MESS_EYES_UPTURNED">upturned</message>  
+	<message name="UI_MESS_EYES_WIDE_SET">wide set</message> 
+	
+	
+	<message name="UI_MESS_FACE_ELIPSE">elipse</message>
+	<message name="UI_MESS_FACE_RECTANGLE">rectangle</message>
+	<message name="UI_MESS_FACE_ROUND">round</message>
+	<message name="UI_MESS_FACE_SQUARE">square</message>
+	<message name="UI_MESS_FACE_TRIANGLE">triangle</message>
+	<message name="UI_MESS_FACE_COMMON">common</message>
+	
+		
+	<message name="UI_MESS_NOSE_ASYMMETRICAL">asymmetrical</message>
+	<message name="UI_MESS_NOSE_BULBOUS">bulbous</message>
+	<message name="UI_MESS_NOSE_LONG_AND_ARROW">long and arrow</message>
+	<message name="UI_MESS_NOSE_SMALL_AND_SHORT">small and short</message>
+	<message name="UI_MESS_NOSE_TURNED_UP">turned up</message>
+	<message name="UI_MESS_NOSE_common">common</message>
+	
+	<message name="UI_MESS_MOUTH_BOW_SHAPED_LIPS">bow shaped lips</message>
+	<message name="UI_MESS_MOUTH_FULL_LIPS">full lips</message>
+	<message name="UI_MESS_MOUTH_DOWNWARD_TURNED_LIPS">downward turned lips</message>
+	<message name="UI_MESS_MOUTH_HEART_SHAPED_LIPS">heart shaped lips</message>
+	<message name="UI_MESS_MOUTH_HEAVY_LOWER_LIPS">heavy lower lips</message>
+	<message name="UI_MESS_MOUTH_HEAVY_UPPER_LIPS">heavy upper lips</message>
+	<message name="UI_MESS_MOUTH_ROUND_LIPS">round lips</message>
+	<message name="UI_MESS_MOUTH_THIN_LIPS">thin lips</message>
+	<message name="UI_MESS_MOUTH_WIDE_LIPS">wide lips</message>
+	<message name="UI_MESS_MOUTH_COMMON">common</message>
+
+  </language>
+  <language code="bg">
+    <message name="UI_MESS_EYES">Очи</message>
+    <message name="UI_MESS_MOUTH">Уста</message>
+	<message name="UI_MESS_NOSE">Нос</message>
+	<message name="UI_MESS_FACE">Лице</message>
+	
+	<message name="UI_MESS_EYES_ALMOND">бадемови</message>  
+	<message name="UI_MESS_EYES_CLOSE_SET">събрани</message>  
+	<message name="UI_MESS_EYES_DOWNTURNED">с линия надолу</message>  
+	<message name="UI_MESS_EYES_HOODED">очи с качулка</message>  
+	<message name="UI_MESS_EYES_PROTRUDING">изпъкнали</message>  
+	<message name="UI_MESS_EYES_ROUND">кръгли</message>  
+	<message name="UI_MESS_EYES_UPTURNED">обърнати нагоре</message>  
+	<message name="UI_MESS_EYES_WIDE_SET">отдалечени</message> 
+	<message name="UI_MESS_EYES_COMMON">общи</message>
+	
+	<message name="UI_MESS_FACE_ELIPSE">елипсовидно</message>
+	<message name="UI_MESS_FACE_RECTANGLE">правоъгълно</message>
+	<message name="UI_MESS_FACE_ROUND">кръгло</message>
+	<message name="UI_MESS_FACE_SQUARE">квадратно</message>
+	<message name="UI_MESS_FACE_TRIANGLE">триъгълно</message>
+	<message name="UI_MESS_FACE_COMMON">общи</message>
+	
+	<message name="UI_MESS_NOSE_ASYMMETRICAL">асиметричен</message>
+	<message name="UI_MESS_NOSE_BULBOUS">луковичен</message>
+	<message name="UI_MESS_NOSE_LONG_AND_ARROW">дълъг и остър</message>
+	<message name="UI_MESS_NOSE_SMALL_AND_SHORT">малък и свит</message>
+	<message name="UI_MESS_NOSE_TURNED_UP">чип</message>
+	<message name="UI_MESS_NOSE_common">общи</message>
+	
+	<message name="UI_MESS_MOUTH_BOW_SHAPED_LIPS">дъговидни</message>
+	<message name="UI_MESS_MOUTH_FULL_LIPS">плътни</message>
+	<message name="UI_MESS_MOUTH_DOWNWARD_TURNED_LIPS">обърнати надолу</message>
+	<message name="UI_MESS_MOUTH_HEART_SHAPED_LIPS">във формата на сърце</message>
+	<message name="UI_MESS_MOUTH_HEAVY_LOWER_LIPS">голяма долна устна</message>
+	<message name="UI_MESS_MOUTH_HEAVY_UPPER_LIPS">голяма горна устна</message>
+	<message name="UI_MESS_MOUTH_ROUND_LIPS">кръгли</message>
+	<message name="UI_MESS_MOUTH_THIN_LIPS">тънки</message>
+	<message name="UI_MESS_MOUTH_WIDE_LIPS">широки</message>
+	<message name="UI_MESS_MOUTH_COMMON">общи</message>
+
+	
+  </language>
+</translations>
